@@ -1,0 +1,118 @@
+.weather {
+    place-self: center;
+    padding: 40px 30px;
+    border-radius: 20px;
+    background: linear-gradient(145deg, #5a72f3, #8b52f5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+    color: #fff;
+    width: 350px;
+    max-width: 90%;
+    transition: transform 0.3s;
+}
+
+.weather:hover {
+    transform: translateY(-10px);
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.search-bar input {
+    flex: 1;
+    height: 50px;
+    border: none;
+    outline: none;
+    border-radius: 50px;
+    padding-left: 20px;
+    color: #333;
+    font-size: 16px;
+    background: #ffffffaa; /* semi-transparent for modern look */
+    backdrop-filter: blur(10px);
+}
+
+.search-bar input::placeholder {
+    color: #555;
+}
+
+.search-bar img {
+    width: 50px;
+    padding: 12px;
+    border-radius: 50%;
+    background: #ffffffaa;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.search-bar img:hover {
+    transform: scale(1.1);
+}
+
+.weather-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.weather-icon {
+    width: 140px;
+    height: 140px;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.temp-location {
+    text-align: center;
+}
+
+.temperature {
+    font-size: 70px;
+    font-weight: 700;
+    margin: 5px 0;
+}
+
+.location {
+    font-size: 28px;
+    font-weight: 500;
+}
+
+.weather-data {
+    width: 100%;
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+}
+
+.weather-data .col {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 18px;
+}
+
+.weather-data .col img {
+    width: 30px;
+    height: 30px;
+}
+
+.weather-data .col span {
+    display: block;
+    font-size: 14px;
+    opacity: 0.8;
+}
